@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {Header} from './components/header/header'
+import {Products} from './components/products/products'
+import "./sass/style.css"
+import {Cart} from './components/cart/Cart'
+import {Route} from "wouter"
+import itemContext from './components/context/itemContext'
+import {useState} from "react"
 
 function App() {
+
+  const [item,setItem] = useState([])
+  const value = {item,setItem}
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <itemContext.Provider value={value}>
+      <>
+    <Route path='/'>
+    <Header/>
+    <Products/>
+    </Route>
+    <Route path="/cart">
+    <Cart/>
+    </Route>
+    </>
+    </itemContext.Provider>
   );
 }
 
