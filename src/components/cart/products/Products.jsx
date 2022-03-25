@@ -1,6 +1,7 @@
 import {React,useContext,useEffect,useState} from 'react'
 import itemContext from "../../context/itemContext"
 import {v4 as uuid} from "uuid"
+import {Link} from 'wouter'
 
 export  function Products() {
   const {item} = useContext(itemContext)
@@ -9,6 +10,7 @@ export  function Products() {
 
   useEffect(() => {
     update(item)
+    
   },[any])
 
   
@@ -39,6 +41,7 @@ export  function Products() {
              any.splice(indx,1)
              const newAny = [...any]
             update(newAny)
+            
           }}>
           <span className="material-icons-outlined">clear</span>
           </button>
@@ -47,7 +50,11 @@ export  function Products() {
       })}
       <div className="footer">
           <h2>Total: {totalAmount}¥</h2>
-          <button className="footer__button">Pay</button>
+          
+          <Link to="/pay">
+          <button className="footer__button"  
+          >Pay</button>
+          </Link>
       </div>
         </div>
       )

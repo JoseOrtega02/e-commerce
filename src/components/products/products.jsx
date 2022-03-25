@@ -24,7 +24,10 @@ export  function Products() {
           <img src={product.imageUrl} alt=""/>
           <h2>{product.shopName}</h2>
           <h3>¥{product.itemPrice}</h3>
-          <button onClick={()=>{setItem(productos => [...productos, {name:product.shopName, price: product.itemPrice,img: product.imageUrl,id:uuid()}])}}>Add to the cart</button>
+          <button onClick={()=>{
+            setItem(productos => [...productos, {name:product.shopName, price: product.itemPrice,img: product.imageUrl,id:uuid()}])
+            
+             }}>Add to the cart</button>
         </div>
           )
         })}
