@@ -34,6 +34,11 @@ export  function Products() {
       </div>
     )
   }
-  return <h1>Loading...</h1>
+  return <div className="spinner">
+    <div class="loadingio-spinner-eclipse-jxbfrp3wpzb"><div class="ldio-40inicpvbg2">
+<div></div>
+</div></div>
+
+  </div>
   
 }

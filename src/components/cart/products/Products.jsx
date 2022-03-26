@@ -24,7 +24,7 @@ export  function Products() {
   total()
 
   
-  //  if(any.lenght === 0){
+  
     return (
       <div className="cart__container--products">
       {any.map(product =>{
@@ -58,7 +58,4 @@ export  function Products() {
       </div>
         </div>
       )
-  //  }return<h1>Your Cart is Empty</h1>
-  
-  
 }
