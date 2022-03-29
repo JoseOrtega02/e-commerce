@@ -1,3 +1,11 @@
+# e-commerce-
+I made a e-commerce with React,with the API(Rakuten),the payment page its totally Fake so dont worry, i dont take any data from you.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
